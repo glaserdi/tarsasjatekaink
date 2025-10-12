@@ -182,7 +182,7 @@ mechanism_pref = st.sidebar.multiselect(
 only_one = st.sidebar.checkbox("Csak egy játékot ajálj")
 
 # Főcím
-st.title("🎉 Melyik társasjáték legyen ma?")
+st.title("🎉 Melyik társasjátékkal játsszunk ma?")
 
 # Ajánló logika
 def matches(game):
@@ -240,6 +240,7 @@ if matched_games:
 
 else:
     st.warning("Sajnos nincs olyan játék, ami minden feltételnek megfelelne. Próbálj meg kevesebb szűrőt használni!")
+
 
 
 
