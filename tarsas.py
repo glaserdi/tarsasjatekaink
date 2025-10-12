@@ -6,7 +6,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     layout="centered"
 )
-def resize_and_pad(image_path, size=(200, 200), bg_color=(255, 255, 255, 0)):
+def resize_and_pad(image_path, size=(400, 400), bg_color=(255, 255, 255, 0)):
     try:
         img = Image.open(image_path).convert("RGBA")
         img.thumbnail(size, Image.LANCZOS)  # arányosan átméretezi (felnagyít is!)
@@ -247,6 +247,7 @@ if matched_games:
 
 else:
     st.warning("Sajnos nincs olyan játék, ami minden feltételnek megfelelne. Próbálj meg kevesebb szűrőt használni!")
+
 
 
 
