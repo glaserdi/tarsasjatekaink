@@ -4,7 +4,8 @@ from PIL import Image, ImageOps
 
 st.set_page_config(
     initial_sidebar_state="expanded",
-    layout="centered"
+    layout="centered", 
+    use_container_width=True
 )
 def resize_and_pad(image_path, size=(400, 400), bg_color=(255, 255, 255, 0)):
     try:
@@ -241,6 +242,7 @@ if matched_games:
 
 else:
     st.warning("Sajnos nincs olyan játék, ami minden feltételnek megfelelne. Próbálj meg kevesebb szűrőt használni!")
+
 
 
 
