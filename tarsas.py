@@ -95,7 +95,9 @@ games = [
     {"name": "Spot It", "players": (2, 8), "duration": "15–30 perc", "complexity": "egyszerű", "style": ["ügyességi", "gyerekbarát", "gyors"], "cooperative": False, "rules":"", "image": "games/spotit.png", "description": "A Spot it pörgős, zsebre vágható kártyajáték 5-féle játékváltozattal. A kártyákon 8-8 különböző képecske látható, és bármelyik két kártyán mindig van egy ugyanolyan belőlük. A játékosok feladata, hogy a többieknél gyorsabban megtalálják a közös képeket. A koncentrációt és a reflexeket fejlesztő társasjáték.", "mechanisms": ["aszimmetrikus", "kártya-képes", "kooperatív"],
      "author": "Olivier Latombe",
      "year": 2015},
-    {"name": "Magyar kártya", "players": (2, 16), "duration": "15–30 perc", "complexity": "egyszerű", "style": ["klasszikus", "versengős"], "cooperative": False, "rules":"", "image": "games/magyar.png", "description": ""},
+    {"name": "Magyar kártya", "players": (2, 16), "duration": "15–30 perc", "complexity": "egyszerű", "style": ["klasszikus", "versengős"], "cooperative": False, "rules":"", "image": "games/magyar.png", "description": "", "mechanisms": [],
+"author": "Piatnik",
+"year": 2022},
     {"name": "Ligretto (3 doboz)", "players": (2, 12), "duration": "15–30 perc", "complexity": "egyszerű", "style": ["gyors", "reakcióidő", "party"], "cooperative": False, "rules":"", "image": "games/ligretto.png", "description": "A Ligretto egy gyors kártyajáték, amely bármely korosztály számára remek szórakozás. Leülhet egy asztalhoz akár az egész család, senki sem fog unatkozni. A játékban a legfontosabb a gyorsaság. A lapokon lévő színek és számok egyaránt számítanak. A partit az kezdi, aki birtokolja az 1-es kártyalapot. Ezt követően minden játékos egyidejűleg próbálja meg lerakni a sorban következő és színben egyező lapjait. A gyorsaság dönt, ki teheti le végül a kártyát, a keresést azonban megnehezíti, hogy a kártyákat több helyen kell tartani, és sok esetben nem is lehet megnézni minden lapot. A végén pontozással dől el, ki a nyertes. A szabályok könnyen elsajátíthatók. A játék gyors, koncentrációt igényel, de közben szórakoztató és rendkívül izgalmas.", "mechanisms": ["aszimmetrikus", "kártya-képes", "kooperatív"],
      "author": "Olivier Latombe",
      "year": 2015},
@@ -241,6 +243,7 @@ if matched_games:
 
 else:
     st.warning("Sajnos nincs olyan játék, ami minden feltételnek megfelelne. Próbálj meg kevesebb szűrőt használni!")
+
 
 
 
