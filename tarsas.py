@@ -174,11 +174,10 @@ st.sidebar.title("🎲 Kérdőív")
 all_games=st.sidebar.checkbox("Összes játék mutatása")
 num_players = st.sidebar.slider("Hányan játszanátok?", 1, 10, 4)
 play_time = st.sidebar.selectbox("Mennyi időtök van?", ["15–30 perc", "30–60 perc", "60–120 perc", "2+ óra"])
-style_pref = st.sidebar.multiselect("Milyen típusú játékra vágytok?", ["party játék", "stratégiai", "kooperatív", "versengős", "gyerekbarát", "történetvezérelt", "logikai", "kártyajáték", "gyors"])
-complexity_pref = st.sidebar.radio("Milyen bonyolultságú legyen a játék?", ["nagyon egyszerű", "egyszerű", "közepesen összetett"])
+style_pref = st.sidebar.multiselect("Milyen típusú játékra vágytok?", list({s for game in games for s in game["style"]}))
+complexity_pref = st.sidebar.radio("Milyen bonyolultságú legyen a játék?", list({game["complexity"] for game in games}))
 mechanism_pref = st.sidebar.multiselect(
-    "Milyen mechanizmus tetszik?", 
-    ["pakliépítés", "kockadobás", "lapkalehelyezés", "blöff", "kooperáció", "draftolás", "szerepjáték", "programozás", "területfoglalás"]
+    "Milyen mechanizmus tetszik?", list({m for game in games for m in game["mechanisms"]})
 )
 only_one = st.sidebar.checkbox("Csak egy játékot ajálj")
 
@@ -241,6 +240,7 @@ if matched_games:
 
 else:
     st.warning("Sajnos nincs olyan játék, ami minden feltételnek megfelelne. Próbálj meg kevesebb szűrőt használni!")
+
 
 
 
