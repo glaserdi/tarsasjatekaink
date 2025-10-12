@@ -241,12 +241,13 @@ if matched_games:
                 unsafe_allow_html=True
             )
         with col2:
-            img = resize_and_pad(game["image"], size=(180, 180))
+            img = resize_and_pad(game["image"], size=(200, 200))
             if img:
                 st.image(img)
 
 else:
     st.warning("Sajnos nincs olyan játék, ami minden feltételnek megfelelne. Próbálj meg kevesebb szűrőt használni!")
+
 
 
 
