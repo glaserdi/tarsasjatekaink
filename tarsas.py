@@ -182,6 +182,10 @@ num_players = st.sidebar.slider("Hányan játszanátok?", 1, 10, 4)
 play_time = st.sidebar.selectbox("Mennyi időtök van?", ["15–30 perc", "30–60 perc", "60–120 perc", "2+ óra"])
 style_pref = st.sidebar.multiselect("Milyen típusú játékra vágytok?", ["party", "stratégiai", "kooperatív", "versengős", "gyerekbarát", "történetvezérelt", "logikai", "kártyajáték", "gyors"])
 complexity_pref = st.sidebar.radio("Milyen bonyolultságú legyen a játék?", ["egyszerű", "közepes", "összetett"])
+mechanism_pref = st.sidebar.multiselect(
+    "Milyen mechanizmus tetszik?", 
+    ["pakliépítés", "kockadobás", "lapkalehelyezés", "blöffölés", "kooperáció", "draftolás", "szerepjáték", "programozás", "területfoglalás"]
+)
 only_one = st.sidebar.checkbox("Csak egy játékot ajálj")
 
 # Főcím
@@ -243,6 +247,7 @@ if matched_games:
 
 else:
     st.warning("Sajnos nincs olyan játék, ami minden feltételnek megfelelne. Próbálj meg kevesebb szűrőt használni!")
+
 
 
 
